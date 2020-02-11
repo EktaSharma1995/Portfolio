@@ -27,7 +27,7 @@
   },
   "homepage": "",
   "scripts": {
-    "build": "npm run webpack -p --config=configs/webpack/prod.js",
+    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rimraf dist/*",
     "lint": "tslint './src/**/*.ts*' --format stylish --project . --force",
     "start": "npm run start-dev",
