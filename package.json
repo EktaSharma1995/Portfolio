@@ -2,6 +2,10 @@
   "name": "react-webpack-typescript-starter",
   "version": "0.1.0",
   "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
   "keywords": [
     "react",
     "webpack",
