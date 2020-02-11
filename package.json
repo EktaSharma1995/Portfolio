@@ -93,6 +93,7 @@
     "react-sticky-header": "^0.2.0",
     "react-waypoint": "^9.0.2",
     "reactstrap": "^8.4.1",
+    "source-map-loader": "^0.2.4",
     "waypoints": "^4.0.1"
   }
 }
