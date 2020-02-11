@@ -10,16 +10,16 @@ module.exports = {
   context: resolve(__dirname, "../../src"),
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   use: ["babel-loader", "source-map-loader"],
-      //   exclude: /node_modules/
-      // },
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader", "source-map-loader"],
+        exclude: /node_modules/
       },
+      //{
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   use: ["babel-loader"]
+      // },
       {
         test: /\.tsx?$/,
         use: ["babel-loader", "awesome-typescript-loader"]
