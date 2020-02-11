@@ -1,0 +1,24 @@
+.jumbotron {
+  text-align: center;
+  margin-top: 38px;
+}
+
+.my-pic {
+  height: 150px;
+  display: block;
+  margin: auto;
+  border-radius: 20%;
+}
+
+.scrollBtn {
+  margin-top: 14px;
+}
+
+.circle {
+  color: grey;
+}
+
+.circle:hover {
+  color: #11abb0;
+}
+/*# sourceMappingURL=Title.css.map */
