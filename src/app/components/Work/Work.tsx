@@ -1,29 +1,65 @@
-import React from "react";
-import "./Work.css";
-import * as ReactBootStrap from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAngular,
+  faApple,
+  faBootstrap,
+  faCss3,
+  faGit,
+  faHtml5,
+  faJava,
+  faJs,
+  faLaravel,
+  faLinux,
   faNodeJs,
   faNpm,
-  faHtml5,
-  faCss3,
-  faJs,
-  faJava,
-  faAngular,
+  faPhp,
   faReact,
   faSass,
-  faBootstrap,
-  faPhp,
-  faWindows,
-  faApple,
-  faLaravel,
-  faGit,
-  faLinux
+  faWindows
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as React from "react";
+import * as ReactBootStrap from "react-bootstrap";
 
-import { faDatabase, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faDatabase } from "@fortawesome/free-solid-svg-icons";
 
-const Work = () => {
+export const Work = () => {
+  const title = {
+    section1: "Education",
+    section2: "Work",
+    section3: "Skills"
+  };
+
+  const institute = {
+    first: {
+      name: "Humber College, North Campus, Canada",
+      course: "Postgraduate Diploma in Information Technology Solutions",
+      endDate: "April 2019"
+    },
+
+    second: {
+      name: "Amity University, Noida, India",
+      course: "B.Tech in Computer Science Enginnering",
+      endDate: "June 2017"
+    }
+  };
+
+  const company = {
+    first: {
+      name: "Checkpoint Research Inc., Toronto, Canada",
+      position: "Full Stack Developer ",
+      date: "January 2019 - Present"
+    },
+
+    second: {
+      name: "Paymentus Corporation, Charlotte, NC",
+      position: "Software Intern ",
+      date: "May 2016 - July 2016"
+    }
+  };
+
+  const toolsHeading = "Programming Languages & Tools";
+  const workflow = "workflow";
+
   return (
     <ReactBootStrap.Container fluid>
       <section id="resume">
@@ -31,17 +67,16 @@ const Work = () => {
         <ReactBootStrap.Row className="education">
           <ReactBootStrap.Col sm lg={3} className="columns header-col">
             <h1>
-              <span>Education</span>
+              <span>{title.section1}</span>
             </h1>
           </ReactBootStrap.Col>
           <ReactBootStrap.Col sm lg={8} className="columns main-col">
             <div className="row item">
               <div className="col-sm-12 col-lg-12 columns">
-                <h3>Humber College, North Campus, Canada</h3>
+                <h3>{institute.first.name}</h3>
                 <p className="info">
-                  Postgraduate Diploma in Information Technology Solutions{" "}
-                  <span>&bull;</span>
-                  <em className="date">April 2019</em>
+                  {institute.first.course} <span>&bull;</span>
+                  <em className="date">{institute.first.endDate}</em>
                 </p>
 
                 <p className="description">
@@ -62,10 +97,11 @@ const Work = () => {
             {/* item end  */}
             <ReactBootStrap.Row className="item">
               <ReactBootStrap.Col sm lg={12} className="columns">
-                <h3>Amity University, Noida, India</h3>
+                <h3>{institute.second.name}</h3>
                 <p className="info">
-                  B.Tech in Computer Science Enginnering <span>&bull;</span>{" "}
-                  <em className="date">June 2017</em>
+                  {institute.second.course}
+                  <span>&bull;</span>{" "}
+                  <em className="date">{institute.second.endDate}</em>
                 </p>
 
                 <p className="description">
@@ -92,19 +128,23 @@ const Work = () => {
         <ReactBootStrap.Row className="work" id="work">
           <ReactBootStrap.Col sm lg={3} className="columns header-col">
             <h1>
-              <span>Work</span>
+              <span>{title.section2}</span>
             </h1>
           </ReactBootStrap.Col>
           <div className="col-sm-12 col-lg-8 columns main-col">
             <div className="row item">
               <div className="col-sm-12 col-lg-12 columns">
-                <h3>Checkpoint Research Inc., Toronto, Canada</h3>
+                <h3>{company.first.name}</h3>
                 <p className="info">
-                  Full Stack Developer <span>&bull;</span>
-                  <em className="date">January 2019 - Present</em>
+                  {" "}
+                  {company.first.position}
+                  <span>&bull;</span>
+                  <em className="date">{company.first.date}</em>
                 </p>
                 <p>
-                  Link to the application: <a href="#">Checkpoint</a>
+                  Link to the application:{" "}
+                  <a href="https://apps.checkpointresearch.ca/">Checkpoint</a>
+                  {"  "}(Please Contact for more Information)
                 </p>
                 <ul className="description">
                   <li className="points">
@@ -170,10 +210,11 @@ const Work = () => {
             {/* Item 1 */}
             <div className="row item">
               <div className="col-sm-12 col-lg-12 columns">
-                <h3>Paymentus Corporation, Charlotte, NC</h3>
+                <h3>{company.second.name}</h3>
                 <p className="info">
-                  Software Intern <span>&bull;</span>
-                  <em className="date">May 2016 - July 2016</em>
+                  {company.second.position}
+                  <span>&bull;</span>
+                  <em className="date">{company.second.date}</em>
                 </p>
                 <ul className="description">
                   <li className="points">
@@ -211,7 +252,7 @@ const Work = () => {
         <div className="row skill" id="skills">
           <div className="col-sm-12 col-lg-3 columns header-col">
             <h1>
-              <span>Skills</span>
+              <span>{title.section3}</span>
             </h1>
           </div>
           <div className="col-sm-12 col-lg-8 columns main-col">
@@ -223,7 +264,7 @@ const Work = () => {
               Agile, and Scrum methodology.
             </p>
 
-            <div className="type mb-3">Programming Languages & Tools</div>
+            <div className="type mb-3">{toolsHeading}</div>
             <div className="skills-icons">
               <ul className="list-inline dev-icons">
                 <li className="list-inline-item titleCSS">
@@ -284,7 +325,7 @@ const Work = () => {
                 </li>
               </ul>
             </div>
-            <div className="type mb-3">Workflow</div>
+            <div className="type mb-3">{workflow}</div>
             <div className="workflow">
               <ul className="fa-ul mb-0 check">
                 <li className="w-value">
@@ -336,5 +377,3 @@ const Work = () => {
     </ReactBootStrap.Container>
   );
 };
-
-export default Work;

@@ -1,18 +1,10 @@
-import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import "./Footer.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleUp } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faTwitter,
-  faDribbble,
-  faSkype,
-  faInstagram,
-  faGooglePlus
-} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MDBContainer, MDBFooter } from "mdbreact";
+import * as React from "react";
 
-const Footer = () => {
+export const Footer = () => {
+  const name = "Ekta Sharma";
   return (
     <MDBContainer fluid>
       <MDBFooter className="font-small pt-4 mt-4 footer">
@@ -27,13 +19,10 @@ const Footer = () => {
         {/* </MDBContainer> */}
         <div className="footer-copyright text-center py-3">
           <MDBContainer fluid>
-            &copy; {new Date().getFullYear()} Copyright:{" "}
-            <a href="#"> Ekta Sharma </a>
+            &copy; {new Date().getFullYear()} Copyright: <a href="#">{name}</a>
           </MDBContainer>
         </div>
       </MDBFooter>
     </MDBContainer>
   );
 };
-
-export default Footer;

@@ -1,11 +1,24 @@
-import React from "react";
-import "./About.css";
+import * as React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const About = () => {
+export const About = () => {
+  const title = {
+    section1: "About me",
+    section2: "Contact Details"
+  };
+
+  const contactDetails = {
+    name: "Ekta Sharma",
+    house: "Toronto",
+    provinceCountry: "Ontario, CA",
+    phone: "(437)997-0127",
+    email: "esharma1995@gmail.com"
+  };
+
+  const name = "Ekta Sharma";
   return (
     <ReactBootStrap.Container fluid>
       <section id="about" className="section feature-box mb-5">
@@ -17,7 +30,7 @@ const About = () => {
           <ReactBootStrap.Col sm lg={5}>
             <ReactBootStrap.Row>
               <ReactBootStrap.Col sm>
-                <h2>About Me</h2>
+                <h2>{title.section1}</h2>
                 <p>
                   I am a programmer by heart. I am always curious to learn about
                   new trends. I have experience in working on front-end and
@@ -34,18 +47,18 @@ const About = () => {
           {/* <div className="row"> */}
           <ReactBootStrap.Col sm lg={2}></ReactBootStrap.Col>
           <ReactBootStrap.Col sm lg={4} className="contact-details">
-            <h2>Contact Details</h2>
+            <h2>{title.section2}</h2>
             <p className="address">
-              <span>Ekta Sharma</span>
+              <span>{contactDetails.name}</span>
               <br />
               <span>
-                Toronto
-                <br /> Ontario, CA
+                {contactDetails.house}
+                <br /> {contactDetails.provinceCountry}
               </span>
               <br />
-              <span>(437)997-0127</span>
+              <span>{contactDetails.phone}</span>
               <br />
-              <span>esharma1995@gmail.com</span> <br />
+              <span>{contactDetails.email}</span> <br />
               <span>
                 <a
                   href="https://github.com/EktaSharma1995"
@@ -79,5 +92,3 @@ const About = () => {
     </ReactBootStrap.Container>
   );
 };
-
-export default About;
