@@ -1,11 +1,11 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 import "./../assets/sass/App.css";
-import { About } from "./components/About/About";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
-import { Title } from "./components/Title/Title";
-import { Work } from "./components/Work/Work";
+import { About } from "./components/About/about";
+import { Footer } from "./components/Footer/footer";
+import { Header } from "./components/Header/header";
+import { Title } from "./components/Title/title";
+import { Work } from "./components/Work/work";
 
 class App extends React.Component<{}, undefined> {
   public render() {
